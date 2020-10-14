@@ -1,4 +1,7 @@
->useRef hook intrigued me a lot until I found this project, which explains clearly what it means. The text-book definition for useRef goes like this:
+>useRef hook intrigued me a lot until I found this project, which explains clearly what it means with the help of two separate counters one for incrementing state
+& the other for incrementing the ref counter.
+
+The text-book definition for useRef goes like this:
 
 To get access to the DOM, you need to ask React to give you access to a particular DOM node when it renders your component. The way this happens is
 through a special prop called `ref`.
@@ -7,6 +10,7 @@ through a special prop called `ref`.
 
 The below diagram explains the concept. 
 ![Alt Text](https://github.com/venky4c/react-useref/blob/master/src/ReactLifeCycle.jpg)
+Essentially what we can infer from the above diagram is that **useRef** happens in the *pre-commit* phase & **useEffect** happens in the *commit* phase
 
 ```javascript
 const inputRef = useRef(null);//Now that we have added a reference to our input element, we can use that reference to set focus.
